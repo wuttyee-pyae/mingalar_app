@@ -1,0 +1,19 @@
+<div style="margin: 85px 15px;">
+    <mat-accordion>
+        <mat-expansion-panel style="margin: 10px 0px;border-radius: 10px;" (opened)="secondPanelOpenState = true" 
+          (closed)="secondPanelOpenState = false" *ngFor="let item of itemList">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+             {{item.title}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div style="display: flex;">
+            <p (click)="navigateDetail('edit',item.id)"> <b>{{item.body}}</b></p>
+          <i class="flaticon-delete" style="font-size: 20px;color:red;" (click)="openConfirmationDialog('delete', item.id)"></i>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    <button mat-fab color="accent" class="menu-button" (click)="openConfirmationDialog('add')">
+        <i class="material-icons" >add</i>
+    </button>
+</div>

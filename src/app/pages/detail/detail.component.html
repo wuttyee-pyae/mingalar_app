@@ -1,0 +1,38 @@
+<div  style="margin: 85px 15px;">
+    <form class="form" [formGroup]="detailForm" >
+        <div class="row m-1">
+            <div class="col-12">
+                <label class="col-4 form-label m-auto input-text">Title<span class="text-danger">*</span></label>
+                <input type="text" class="col-8 form-control form-control-sm mt-2" name="title"
+                  placeholder="Title" autocomplete="off" formControlName="title"
+                  [class.is-invalid]="isControlInvalid('title')"
+                  [class.is-valid]="isControlValid('title')"/>
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-12 mt-3">
+                <label class="col-4 form-label m-auto input-text">Body<span class="text-danger">*</span></label>
+                <textarea type="text" class="col-8 form-control form-control-sm mt-2" style="height: 180px;" name="body"
+                  placeholder="body" autocomplete="off" formControlName="body"
+                  [class.is-invalid]="isControlInvalid('body')"
+                  [class.is-valid]="isControlValid('body')"></textarea>
+            </div>
+        </div>
+        <div class="row m-1 mt-5" style="justify-content: center;">
+            <button type="submit" class="btn btn-primary btn-elevate" style="width: 100px;" *ngIf="pageStatus == 'create'" 
+            [disabled]="detailForm.invalid" (click)="uploadData()">Submit</button>
+            <button type="submit" class="btn btn-primary btn-elevate" style="width: 100px;" *ngIf="pageStatus == 'edit'" 
+            [disabled]="detailForm.invalid" (click)="updateData()">Update</button>
+        </div>
+    </form>
+    <button mat-fab color="accent" class="menu-button" routerLink="..">
+        <i class="material-icons" >arrow_back</i>
+    </button>
+</div>
+        
+
+
+
+
+
+

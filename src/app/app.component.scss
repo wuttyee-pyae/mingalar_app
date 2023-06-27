@@ -1,0 +1,75 @@
+:host {
+    font-family: Helvetica Neue;
+    font-size: 36pts;
+    color: #FFF;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #4C00A2;
+    color: #FFF;
+    font-weight: 600;
+    z-index: 5;
+    width: 440px;
+  }
+.container {
+    width: 440px;
+    height: 100vh;
+    padding: 0;
+    background-color: #3A0079;
+  }
+  
+  .sidenav-content {
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    background-color: #3A0079;
+    height: 100%;
+  }
+  
+  .sidenav {
+    padding: 20px;
+    margin-top: 60px;
+    border-right: 0.5px solid grey;
+    
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 500px;
+    }
+
+  .tab-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 439px;
+  }
+
+  

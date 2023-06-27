@@ -1,0 +1,32 @@
+<div style="height: 60px;">
+  <div class="amount-text">
+    <div style="position: absolute;margin: 10px; width: 96%;">
+      <i class="flaticon-piggy-bank" style="font-size: 30px;margin-right: 12px;"></i>
+      <span > {{'walletText' | translate }} </span>
+      <i class="flaticon-eye" style="font-size: 20px;margin-left: 12px;" (click)="showAmount()"></i>
+      <span class="cash-number" *ngIf="showWalletAmount">{{'amount' | translate }}</span>
+      <span class="cash-number" *ngIf="!showWalletAmount">******</span>
+    </div>
+  </div>
+  
+</div>
+<div style="width: 100%; height: 200px; text-align:center;margin-top:30px; padding:0;">
+  <ng-image-slider #nav 
+    [images]="imgCollection"
+    [infinite]="false"
+    [autoSlide]="1"
+    [imageSize]="{width: '100%', height: 200}"
+    slideImage="1"></ng-image-slider>
+</div>
+
+<div class="amount-text" style="position: relative;">
+  <div style="position: absolute;margin: 10px; width: 96%;">
+    <span > {{userText}} </span>
+  </div>
+</div>
+<div class="row" style="padding: 0px 20px;">
+  <div class="col-4" *ngFor="let item of slides">
+    <mat-card style="border-radius: 10px; margin: 20px 0px;" (click)="navigateToDetail()">
+      <img mat-card-image [src]="item.image" style="height: 120px;border: 8px solid #FFDA0A;">
+  </mat-card>
+  </div>
